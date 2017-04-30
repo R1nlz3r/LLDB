@@ -1,0 +1,15 @@
+br s -f source.cpp -l 16 -i 1
+br s -f source.cpp -l 19 -o
+b source.cpp:32
+b source.cpp:41
+c
+expr tab[0] = tab[1]
+c
+expr int $swap = tab[1]
+c
+expr count = 0; tab[2] = tab[1]; tab[1] = $swap
+c
+expr tmp = 0; int j = 0; while(j < max){tmp += min[j]; ++j;}
+c
+expr int k = 0; while(k < max){biggest = (biggest <= min[k])? min[k] : biggest; ++k;}; max = 0
+c
